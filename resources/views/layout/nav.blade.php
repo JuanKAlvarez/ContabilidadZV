@@ -11,11 +11,11 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav ">
+				<ul class="nav navbar-nav header-sub-titulo-menu ">
 					<li><a href="{{ url('/') }}">Inicio</a></li>
 				</ul>
 
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right header-sub-titulo-menu">
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Ingresar</a></li>
 						<li><a href="{{ url('/auth/register') }}">Registrarse</a></li>
