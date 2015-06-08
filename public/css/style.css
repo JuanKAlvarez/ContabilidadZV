@@ -1,7 +1,7 @@
 
 
 body{
-	background: url(/img/fondo.jpg) no-repeat center center fixed;
+	background: url(img/fondo.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -50,8 +50,18 @@ header{
 
 }
 
-.navbar {
+.navbar{
 	margin-bottom: 0;	
 }
 
+.toll-bar{
+	background: #e3e3e3;
+	color: #fff;
+	margin-left: 0px;
+	margin-right: 0px;
+}
 
+.toll-bar a{
+	margin: 5px 0px 0 0px;
+
+}
