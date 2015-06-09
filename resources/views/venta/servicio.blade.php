@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-
+<input type="hidden" value="#servicio-toolbar" id="pag">
 			<div class="panel panel-default">
 				<div class="panel-heading">Servicios</div>
 
