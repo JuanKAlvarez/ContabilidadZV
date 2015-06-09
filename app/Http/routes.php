@@ -19,3 +19,17 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'] ], function()
+{
+    Route::resource('internet',	 	'InternetController');
+    Route::resource('impresora', 	'ImpresoraController');
+    Route::resource('papeleria', 	'PapeleriaController');
+    Route::resource('servicio', 	'ServicioController');
+    Route::resource('gana',		 	'GanaController');
+    Route::resource('minutos-ip',	'MinutosIPController');
+    Route::resource('win-red',		'WinRedController');
+
+});
+
