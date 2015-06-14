@@ -12,7 +12,15 @@ class CreatePapeleriaTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('papeleria', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +30,7 @@ class CreatePapeleriaTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('papeleria');
 	}
 
 }

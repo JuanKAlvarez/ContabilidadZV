@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMinutosipVentasTable extends Migration {
+class CreateTipoEgrsoTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,15 @@ class CreateMinutosipVentasTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('tipo-egrso', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +30,7 @@ class CreateMinutosipVentasTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('tipo-egrso');
 	}
 
 }

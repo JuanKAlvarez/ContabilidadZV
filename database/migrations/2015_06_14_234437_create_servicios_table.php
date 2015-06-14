@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEgresosTable extends Migration {
+class CreateServiciosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,14 @@ class CreateEgresosTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('servicios', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +29,7 @@ class CreateEgresosTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('servicios');
 	}
 
 }

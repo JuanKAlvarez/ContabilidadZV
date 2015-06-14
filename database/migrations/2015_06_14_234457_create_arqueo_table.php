@@ -12,7 +12,14 @@ class CreateArqueoTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('arqueo', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +29,7 @@ class CreateArqueoTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('arqueo');
 	}
 
 }

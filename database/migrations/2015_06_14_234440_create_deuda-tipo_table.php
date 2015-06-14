@@ -12,7 +12,15 @@ class CreateDeudaTipoTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('deuda-tipo', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +30,7 @@ class CreateDeudaTipoTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('deuda-tipo');
 	}
 
 }

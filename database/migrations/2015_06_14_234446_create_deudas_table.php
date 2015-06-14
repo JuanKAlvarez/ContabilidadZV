@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImpresoraVentasTable extends Migration {
+class CreateDeudasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,15 @@ class CreateImpresoraVentasTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('deudas', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +30,7 @@ class CreateImpresoraVentasTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('deudas');
 	}
 
 }

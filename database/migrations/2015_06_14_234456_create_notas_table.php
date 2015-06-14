@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgendaTable extends Migration {
+class CreateNotasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,14 @@ class CreateAgendaTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('notas', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+			
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
@@ -22,7 +29,7 @@ class CreateAgendaTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('notas');
 	}
 
 }
