@@ -12,11 +12,18 @@ class CreateDeudasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('deudas', function(Blueprint $table)
+		Schema::create('deudas-abonos', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->date('fecha');
+			$table->string('nombre-deuda');
+			$table->double('abono',15,2);
 
+			$table->integer('deuda-tipo_id')->unsigned();
+			$table->foreign('deuda-tipo_id')->references('id')->on('deuda-tipo');
 
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');	
 			
 			$table->timestamps();
 			$table->softDeletes();
@@ -30,7 +37,7 @@ class CreateDeudasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('deudas');
+		Schema::drop('deudas-abonos');
 	}
 
 }

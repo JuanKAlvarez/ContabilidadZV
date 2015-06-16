@@ -15,7 +15,8 @@ class CreateNotasTable extends Migration {
 		Schema::create('notas', function(Blueprint $table)
 		{
 			$table->increments('id');
-
+			$table->date('fecha');
+			$table->string('nota');
 			
 			$table->timestamps();
 			$table->softDeletes();

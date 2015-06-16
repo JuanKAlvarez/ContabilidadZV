@@ -15,7 +15,7 @@ class CreateDeudaTipoTable extends Migration {
 		Schema::create('deuda-tipo', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('nombre');
+			$table->string('nombre-deuda');
 			$table->string('para'); // Familia o Sala de Internet (Zona Virtual)
 			$table->string('prestamista');
 			$table->string('descripcion')->nullable();

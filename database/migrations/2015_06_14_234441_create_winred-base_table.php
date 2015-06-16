@@ -15,8 +15,8 @@ class CreateWinredBaseTable extends Migration {
 		Schema::create('winred-base', function(Blueprint $table)
 		{
 			$table->increments('id');
-
-
+			$table->date('fecha');
+			$table->double('base',15,2);
 			
 			$table->timestamps();
 			$table->softDeletes();

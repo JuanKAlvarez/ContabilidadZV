@@ -19,7 +19,7 @@ class CreateServiciosTable extends Migration {
 			$table->double('precio',15,2);
 			$table->string('descripcion')->nullable();
 			$table->double('valor',15,2);
-			$table->double('ganancia',15,2);
+
 
 			
 			$table->timestamps();

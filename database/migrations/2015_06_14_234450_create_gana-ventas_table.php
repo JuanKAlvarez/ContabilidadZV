@@ -15,7 +15,15 @@ class CreateGanaVentasTable extends Migration {
 		Schema::create('gana-ventas', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->date('fecha');
+			$table->double('liquidar',15,2);
+			$table->double('ganancia',15,2);
+			$table->double('perdida',15,2);
+			$table->double('total-dia',15,2);
+			$table->string('nota')->nullable();
 
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 			
 			$table->timestamps();
 			$table->softDeletes();
