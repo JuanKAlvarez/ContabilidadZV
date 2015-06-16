@@ -15,6 +15,9 @@ class CreateTipoEgrsoTable extends Migration {
 		Schema::create('tipo-egrso', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('egreso');
+			$table->string('descripcion')->nullable();
+			$table->double('valor',15,2)->nullable();
 
 
 			

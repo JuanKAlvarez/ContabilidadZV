@@ -15,6 +15,13 @@ class CreatePapeleriaTable extends Migration {
 		Schema::create('papeleria', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('producto');
+			$table->string('marca');
+			$table->string('descripcion')->nullable();
+			$table->double('precio',15,2);
+			$table->double('valor',15,2);
+			$table->double('ganancia',15,2);
+
 
 
 			

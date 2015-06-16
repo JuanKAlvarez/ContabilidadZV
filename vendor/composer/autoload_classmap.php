@@ -19,6 +19,7 @@ return array(
     'CreatePapeleriaTable' => $baseDir . '/database/migrations/2015_06_14_234436_create_papeleria_table.php',
     'CreatePapeleriaVentaTable' => $baseDir . '/database/migrations/2015_06_14_234443_create_papeleria-venta_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateProfileUsersTable' => $baseDir . '/database/migrations/2015_06_16_003458_create_profile-users_table.php',
     'CreateServiciosTable' => $baseDir . '/database/migrations/2015_06_14_234437_create_servicios_table.php',
     'CreateSeviciosVentaTable' => $baseDir . '/database/migrations/2015_06_14_234444_create_sevicios-venta_table.php',
     'CreateTipoEgrsoTable' => $baseDir . '/database/migrations/2015_06_14_234439_create_tipo-egrso_table.php',
