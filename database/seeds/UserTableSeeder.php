@@ -11,10 +11,11 @@ class UserTableSeeder extends Seeder {
 	\DB::table('users')->insert(array(
 		
 			'name'			=>		'Juan K Alvarez',
+			'user'			=>		'JuanKAlvarez',
 			'email'			=>		'JuanAlvarezCuartas@hotmail.com',
+			'type'			=>		'admin',
 			'password'		=>		\Hash::make('123456')
 		));
-
 	}
 
 }

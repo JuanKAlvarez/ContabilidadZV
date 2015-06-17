@@ -15,7 +15,7 @@ class CreateAgendaTable extends Migration {
 		Schema::create('agenda', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('nombre')
+			$table->string('nombre');
 			$table->string('telefono-1')->nullable();
 			$table->string('telefono-2')->nullable();
 			$table->string('celular-1')->nullable();
