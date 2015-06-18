@@ -10,7 +10,6 @@
 				<div class="panel-body">
 					Secion ventad de Internet
 
-				</div>
-			</div>
+					
 
 @endsection
