@@ -20,7 +20,7 @@ class CreateEgresosTable extends Migration {
 			$table->double('valor',15,2);
 
 			$table->integer('tipo-egrso_id')->unsigned();
-			$table->foreign('tipo-egrso_id')->references('id')->on('tipo-egrso');
+			$table->foreign('tipo-egrso_id')->references('id')->on('tipos-egresos');
 
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');	
