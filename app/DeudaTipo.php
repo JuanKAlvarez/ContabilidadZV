@@ -8,7 +8,7 @@ class DeudaTipo extends Model {
 
 use SoftDeletes;
 
-protected $table = 'deuda-tipo';
+protected $table = 'deudas-tipos';
 
 
 	protected $fillable = ['nombre-deuda', 'para', 'prestamista','descripcion', 'valor-a-pagar','valor-pagado'];

@@ -4,15 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WinredBase extends Model {
+class Nota extends Model {
 
 use SoftDeletes;
 
-protected $table = 'winred-base';
+protected $table = 'notas';
 
 
-	protected $fillable = ['fecha', 'base'];
+	protected $fillable = ['fecha', 'nota'];
 
 	protected $dates = ['deleted_at'];
+
+
 
 }

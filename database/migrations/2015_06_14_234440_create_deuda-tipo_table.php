@@ -12,7 +12,7 @@ class CreateDeudaTipoTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('deuda-tipo', function(Blueprint $table)
+		Schema::create('deudas-tipos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('nombre-deuda');
@@ -37,7 +37,7 @@ class CreateDeudaTipoTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('deuda-tipo');
+		Schema::drop('deudas-tipos');
 	}
 
 }

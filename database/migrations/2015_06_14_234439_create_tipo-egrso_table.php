@@ -12,7 +12,7 @@ class CreateTipoEgrsoTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tipo-egrso', function(Blueprint $table)
+		Schema::create('tipos-egresos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('egreso');
@@ -31,7 +31,7 @@ class CreateTipoEgrsoTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tipo-egrso');
+		Schema::drop('tipos-egresos');
 	}
 
 }

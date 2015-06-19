@@ -8,7 +8,7 @@ class TipoEgreso extends Model {
 
 use SoftDeletes;
 
-protected $table = 'tipo-egreso';
+protected $table = 'tipos-egresos';
 
 
 	protected $fillable = ['egreso', 'descripcion', 'valor'];

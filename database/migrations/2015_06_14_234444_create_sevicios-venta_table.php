@@ -12,7 +12,7 @@ class CreateSeviciosVentaTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('sevicios-venta', function(Blueprint $table)
+		Schema::create('sevicios-ventas', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->date('fecha');
@@ -38,7 +38,7 @@ class CreateSeviciosVentaTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('sevicios-venta');
+		Schema::drop('sevicios-ventas');
 	}
 
 }

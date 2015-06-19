@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWinredBaseTable extends Migration {
+class CreateBaseTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,11 @@ class CreateWinredBaseTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('winred-base', function(Blueprint $table)
+		Schema::create('base', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->date('fecha');
+			$table->string('producto');
 			$table->double('base',15,2);
 			
 			$table->timestamps();
@@ -30,7 +31,7 @@ class CreateWinredBaseTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('winred-base');
+		Schema::drop('base');
 	}
 
 }

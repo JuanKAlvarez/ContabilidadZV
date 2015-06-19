@@ -12,7 +12,7 @@ class CreatePapeleriaVentaTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('papeleria-venta', function(Blueprint $table)
+		Schema::create('papeleria-ventas', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->date('fecha');
@@ -39,7 +39,7 @@ class CreatePapeleriaVentaTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('papeleria-venta');
+		Schema::drop('papeleria-ventas');
 	}
 
 }

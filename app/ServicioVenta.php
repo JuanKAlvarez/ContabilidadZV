@@ -8,7 +8,7 @@ class ServicioVenta extends Model {
 
 use SoftDeletes;
 
-protected $table = 'servicio-venta';
+protected $table = 'servicios-ventas';
 
 
 	protected $fillable = ['id', 'fecha', 'servicio','catidad', 'total', 'servicio_id','user_id'];

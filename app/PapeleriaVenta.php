@@ -8,7 +8,7 @@ class PapeleriaVenta extends Model {
 
 use SoftDeletes;
 
-protected $table = 'papeleria-venta';
+protected $table = 'papeleria-ventas';
 
 
 	protected $fillable = ['fecha', 'articulo', 'catidad','total', 'ganancia', 'papeleria_id','user_id'];
