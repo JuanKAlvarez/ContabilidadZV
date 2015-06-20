@@ -26,7 +26,7 @@ Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'
     Route::resource('internet',	 	'InternetController');
     Route::resource('impresora', 	'ImpresoraController');
     Route::resource('papeleria', 	'PapeleriaController');
-    Route::resource('servicio', 	'ServicioController');
+    Route::resource('servicios', 	'ServiciosController');
     Route::resource('gana',		 	'GanaController');
     Route::resource('minutos-ip',	'MinutosIPController');
     Route::resource('win-red',		'WinRedController');
