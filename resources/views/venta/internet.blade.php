@@ -48,19 +48,19 @@
 			<div class="  table-responsive">
 						<table class="table">
 							<tr>
-								<th class="">#</th>
-								<th class="">Fecha</th>
-								<th class="">Valor</th>
-								<th class="">Nota</th>
-								<th class=""></th>
+								<th class="text-center">#</th>
+								<th class="text-center">Fecha</th>
+								<th class="text-center">Valor</th>
+								<th class="text-center">Nota</th>
+								<th class="text-center"></th>
 							</tr>
 							@foreach($registros as $registro)
 							<tr>
-								<td class=""> {{$registro->id}} </td>
-								<td class=""> {{$registro->fecha}} </td>
-								<td class=""> {{$registro->valor}} </td>
+								<td class="text-center"> {{$registro->id}} </td>
+								<td class="text-center"> {{$registro->fecha}} </td>
+								<td class="text-right"> $ {{ number_format( $registro->valor,2) }} </td>
 								<td class=""> {{$registro->nota}} </td>
-								<td class="">
+								<td class="text-center">
 									<i 
 										class="fa fa-pencil btn btn-primary btn-xs " 
 										style=" margin: 0"  
