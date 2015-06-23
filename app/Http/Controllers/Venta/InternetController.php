@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Venta;
 use App\InternetVenta;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -16,13 +17,7 @@ class InternetController extends Controller {
 	public function index()
 	{
 		$registros = InternetVenta::orderBy('fecha', 'DESC')->orderBy('id', 'DESC')->get();
-		return view('venta.internet', compact('registros'));
-	}
-
-
-	public function create()
-	{
-		//
+		return view('venta.internet', compact('registros', 'date'));
 	}
 
 	public function store(Request $recuest)
@@ -33,17 +28,6 @@ class InternetController extends Controller {
 		Session::flash('message','El Registro Fue Ingresado Satisfactoriamente');
 		return redirect()->back();
 	}
-
-	public function show($id)
-	{
-		//
-	}
-
-	public function edit($id)
-	{
-
-	}
-
 
 	public function update($id, Request $recuest)
 	{

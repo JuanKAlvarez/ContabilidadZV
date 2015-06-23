@@ -86,7 +86,6 @@
 					</div>
 
 
-
 					@include('modals.internet.ventas.edit')
 					@include('modals.internet.ventas.delete')
 
