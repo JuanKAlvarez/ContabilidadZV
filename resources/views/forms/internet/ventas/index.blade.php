@@ -2,14 +2,14 @@
 	<div class="for-grup">
 	  	{!! Form::label('fecha', 'Fecha:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		{!! Form::date('fecha', \Carbon\Carbon::now('America/Bogota')->format('Y-m-d'),
-	  		 [	'class' => 'form-control']) !!}
+	  		{!! Form::text('fecha', \Carbon\Carbon::now('America/Bogota')->format('Y-m-d'),
+	  		 [	'class' => 'form-control datepicker']) !!}
 	  	</div>
 	</div>
 	
 <!-- Total del Dia -->
 	<div class="for-grup">
-	  	{!! Form::label('valor', 'Total del Dia:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('valor', 'Valor Total:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
 	  		{!! Form::text('valor',  '' ,[	'class' => 'form-control']) !!}
 	  	</div>

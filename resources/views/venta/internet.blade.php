@@ -7,17 +7,7 @@
 		<div class="panel-heading">Internet</div>
 
 		<div class="panel-body">
-		@if(Session::has('message'))
-			<div class="alert alert-info" >
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
-
-
-
-			 	{{Session::get('message')}} 
-			 </div>
-		@endif
+		@include('layout.errors')
 
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-2">
@@ -45,6 +35,7 @@
 			</div>
 
 
+			<hr>
 			<div class="  table-responsive">
 						<table class="table">
 							<tr>
@@ -57,7 +48,7 @@
 							@foreach($registros as $registro)
 							<tr>
 								<td class="text-center"> {{$registro->id}} </td>
-								<td class="text-center"> {{$registro->fecha}} </td>
+								<td class="text-center"> {{ DateToEsp::DiaMesAno($registro->fecha)}} </td>
 								<td class="text-right"> $ {{ number_format( $registro->valor,2) }} </td>
 								<td class=""> {{$registro->nota}} </td>
 								<td class="text-center">
@@ -82,7 +73,9 @@
 							</tr>
 
 							@endforeach
+
 						</table>
+						{!!$registros->setPath('')->render()!!}
 					</div>
 
 

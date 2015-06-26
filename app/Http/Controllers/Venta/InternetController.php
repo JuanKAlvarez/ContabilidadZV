@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Venta;
 
 use App\InternetVenta;
+use App\Http\Requests\StoreInternetVentaRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -16,11 +17,11 @@ class InternetController extends Controller {
 
 	public function index()
 	{
-		$registros = InternetVenta::orderBy('fecha', 'DESC')->orderBy('id', 'DESC')->get();
+		$registros = InternetVenta::orderBy('fecha', 'DESC')->orderBy('id', 'DESC')->paginate(10);
 		return view('venta.internet', compact('registros', 'date'));
 	}
 
-	public function store(Request $recuest)
+	public function store(StoreInternetVentaRequest $recuest)
 	{
 		$data = new InternetVenta();
 		$data->fill($recuest->all());
