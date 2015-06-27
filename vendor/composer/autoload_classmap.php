@@ -6,10 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Libs\\DateToEsp' => $baseDir . '/app/Libs/DtaeToEsp.php',
     'CreateAgendaTable' => $baseDir . '/database/migrations/2015_06_14_234454_create_agenda_table.php',
     'CreateArqueoTable' => $baseDir . '/database/migrations/2015_06_14_234457_create_arqueo_table.php',
+    'CreateBaseTable' => $baseDir . '/database/migrations/2015_06_14_234441_create_base_table.php',
     'CreateDeudaTipoTable' => $baseDir . '/database/migrations/2015_06_14_234440_create_deuda-tipo_table.php',
-    'CreateDeudasTable' => $baseDir . '/database/migrations/2015_06_14_234446_create_deudas_table.php',
+    'CreateDeudasAbonosTable' => $baseDir . '/database/migrations/2015_06_14_234446_create_deudas-abonos_table.php',
     'CreateEgresosTable' => $baseDir . '/database/migrations/2015_06_14_234445_create_egresos_table.php',
     'CreateGanaVentasTable' => $baseDir . '/database/migrations/2015_06_14_234450_create_gana-ventas_table.php',
     'CreateImpresoraVentasTable' => $baseDir . '/database/migrations/2015_06_14_234449_create_impresora-ventas_table.php',
@@ -18,13 +20,11 @@ return array(
     'CreateNotasTable' => $baseDir . '/database/migrations/2015_06_14_234456_create_notas_table.php',
     'CreatePapeleriaTable' => $baseDir . '/database/migrations/2015_06_14_234436_create_papeleria_table.php',
     'CreatePapeleriaVentaTable' => $baseDir . '/database/migrations/2015_06_14_234443_create_papeleria-venta_table.php',
-    'CreatePapeleriasTable' => $baseDir . '/database/migrations/2015_06_18_233632_create_papelerias_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateServiciosTable' => $baseDir . '/database/migrations/2015_06_14_234437_create_servicios_table.php',
     'CreateSeviciosVentaTable' => $baseDir . '/database/migrations/2015_06_14_234444_create_sevicios-venta_table.php',
     'CreateTipoEgrsoTable' => $baseDir . '/database/migrations/2015_06_14_234439_create_tipo-egrso_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
-    'CreateWinredBaseTable' => $baseDir . '/database/migrations/2015_06_14_234441_create_winred-base_table.php',
     'CreateWinredVentasTable' => $baseDir . '/database/migrations/2015_06_14_234453_create_winred-ventas_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

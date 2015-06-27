@@ -48,7 +48,7 @@
 							@foreach($registros as $registro)
 							<tr>
 								<td class="text-center"> {{$registro->id}} </td>
-								<td class="text-center"> {{ DateToEsp::DiaMesAno($registro->fecha)}} </td>
+								<td class="text-center"> {{ $d = App\Libs\DateToEsp::DiaMesAno($registro->fecha) }} </td>
 								<td class="text-right"> $ {{ number_format( $registro->valor,2) }} </td>
 								<td class=""> {{$registro->nota}} </td>
 								<td class="text-center">

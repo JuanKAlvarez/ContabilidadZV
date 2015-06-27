@@ -146,10 +146,6 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
-		/*
-		 * Application Service Providers...
-		 */
-		'App\Libs\DtaeToEsp',
 
 	],
 
