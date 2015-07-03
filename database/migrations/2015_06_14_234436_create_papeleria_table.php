@@ -21,9 +21,8 @@ class CreatePapeleriaTable extends Migration {
 			$table->double('precio',15,2);
 			$table->double('valor',15,2);
 			$table->double('ganancia',15,2);
-			
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

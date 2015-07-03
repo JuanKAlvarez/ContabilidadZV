@@ -23,10 +23,9 @@ class CreateEgresosTable extends Migration {
 			$table->foreign('tipo-egrso_id')->references('id')->on('tipos-egresos');
 
 			$table->integer('user_id')->unsigned();
-			$table->foreign('user_id')->references('id')->on('users');	
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

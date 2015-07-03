@@ -23,10 +23,9 @@ class CreateDeudasAbonosTable extends Migration {
 			$table->foreign('deuda-tipo_id')->references('id')->on('deudas-tipos');
 
 			$table->integer('user_id')->unsigned();
-			$table->foreign('user_id')->references('id')->on('users');	
-			
+			$table->foreign('user_id')->references('id')->on('users');
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

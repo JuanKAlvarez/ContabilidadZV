@@ -21,9 +21,8 @@ class CreateServiciosTable extends Migration {
 			$table->double('valor',15,2);
 
 
-			
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

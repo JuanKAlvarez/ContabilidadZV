@@ -21,9 +21,8 @@ class CreateAgendaTable extends Migration {
 			$table->string('celular-1')->nullable();
 			$table->string('celular-2')->nullable();
 			$table->string('nota')->nullable();
-			
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

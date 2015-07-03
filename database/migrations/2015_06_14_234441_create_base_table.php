@@ -18,9 +18,8 @@ class CreateBaseTable extends Migration {
 			$table->date('fecha');
 			$table->string('producto');
 			$table->double('base',15,2);
-			
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 

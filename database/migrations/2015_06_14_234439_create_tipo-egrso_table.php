@@ -18,9 +18,8 @@ class CreateTipoEgrsoTable extends Migration {
 			$table->string('egreso');
 			$table->string('descripcion')->nullable();
 			$table->double('valor',15,2)->nullable();
-			
+
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 
