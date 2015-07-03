@@ -1,86 +1,51 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers\Venta;
 
+use App\ImpresoraVenta;
+use App\Http\Requests\ImpresoraVentaRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class ImpresoraController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
-		return view('venta.impresora');
+		$registros = ImpresoraVenta::orderBy('fecha','DESC')
+																			->orderBy('id','DESC')
+																			->paginate(10);
+		return view('venta.impresora', compact('registros'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+	public function store(ImpresoraVentaRequest $recuest)
 	{
-		//
+		$data = new ImpresoraVenta();
+		$data->fill($recuest->all());
+		$data->save();
+		Session::flash('message','El Registro Fue Ingresado Satisfactoriamente');
+		return redirect()->back();
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+	public function update($id, Request $recuest)
 	{
-		//
+		$data = ImpresoraVenta::findOrFail($id);
+		$data->fill($recuest->all());
+		$data->save();
+		Session::flash('message','El Registro Fue Modificado Satisfactoriamente');
+		return redirect()->back();
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
-		//
+		$data = ImpresoraVenta::findOrFail($id);
+		$data->delete();
+		Session::flash('message','El Registro Fue Eliminado Satisfactoriamente');
+
+		return redirect()->back();
 	}
 
 }

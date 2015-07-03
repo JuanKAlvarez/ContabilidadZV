@@ -10,7 +10,7 @@ class ImpresoraVenta extends Model {
 protected $table = 'impresora-ventas';
 
 
-	protected $fillable = ['fecha', 'total-dia', 'nota','user_id'];
+	protected $fillable = ['fecha', 'valor', 'nota','user_id'];
 
 
     public function user()

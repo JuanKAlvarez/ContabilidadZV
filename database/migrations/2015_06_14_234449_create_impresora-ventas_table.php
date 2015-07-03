@@ -16,7 +16,7 @@ class CreateImpresoraVentasTable extends Migration {
 		{
 			$table->increments('id');
 			$table->date('fecha');
-			$table->double('total-dia',15,2);
+			$table->double('valor',15,2);
 			$table->string('nota')->nullable();
 
 			$table->integer('user_id')->unsigned();

@@ -3,14 +3,13 @@
 namespace App\Http\Controllers\Venta;
 
 use App\InternetVenta;
-use App\Http\Requests\StoreInternetVentaRequest;
+use App\Http\Requests\InternetVentaRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-
 
 class InternetController extends Controller {
 
@@ -23,7 +22,7 @@ class InternetController extends Controller {
 		return view('venta.internet', compact('registros', 'date'));
 	}
 
-	public function store(StoreInternetVentaRequest $recuest)
+	public function store(InternetVentaRequest $recuest)
 	{
 		$data = new InternetVenta();
 		$data->fill($recuest->all());

@@ -13,7 +13,7 @@
 	direction: rtl;
 }
 .datepick-popup {
-	z-index: 1000;
+	z-index: 10000;
 }
 .datepick-disable {
 	position: absolute;
@@ -33,7 +33,7 @@
 .datepick button {
     margin: 0.25em;
     padding: 0.125em 0em;
-	background-color: #5c9ccc;
+	background-color: #66B5F0;
 	color: #fff;
     border: none;
     border-radius: 0.25em;
@@ -119,12 +119,12 @@ button.datepick-cmd {
 .datepick-month {
 	float: left;
 	width: 15em;
-	border: 1px solid #5c9ccc;
+	border: 1px solid #66B5F0;
 	text-align: center;
 }
 .datepick-month-header, .datepick-month-header select, .datepick-month-header input {
 	height: 1.5em;
-	background-color: #5c9ccc;
+	background-color: #66B5F0;
 	color: #fff;
 	font-weight: bold;
 }
