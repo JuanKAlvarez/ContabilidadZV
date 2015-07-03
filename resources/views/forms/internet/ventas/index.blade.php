@@ -6,14 +6,14 @@
 	  		 [	'class' => 'form-control datepicker', 'required']) !!}
 	  	</div>
 	</div>
-	
+
 <!-- Total del Dia -->
 	<div class="for-grup">
 	  	{!! Form::label('valor', 'Valor Total:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
 	  		{!! Form::text('valor',  '' ,[	'class' => 'form-control', 'required', 'autofocus']) !!}
 	  	</div>
-	</div>	
+	</div>
 
 <!-- Nota -->
 	<div class="for-grup">
@@ -29,4 +29,3 @@
 	  		{!! Form::hidden('user_id',  Auth::user()->id ) !!}
 	  	</div>
 	</div>
-

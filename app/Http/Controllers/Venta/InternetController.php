@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers\Venta;
 
@@ -17,7 +17,9 @@ class InternetController extends Controller {
 
 	public function index()
 	{
-		$registros = InternetVenta::orderBy('fecha', 'DESC')->orderBy('id', 'DESC')->paginate(10);
+		$registros = InternetVenta::orderBy('fecha','DESC')
+																			->orderBy('id','DESC')
+																			->paginate(10);
 		return view('venta.internet', compact('registros', 'date'));
 	}
 
@@ -44,7 +46,7 @@ class InternetController extends Controller {
 		$data = InternetVenta::findOrFail($id);
 		$data->delete();
 		Session::flash('message','El Registro Fue Eliminado Satisfactoriamente');
-		
+
 		return redirect()->back();
 	}
 
