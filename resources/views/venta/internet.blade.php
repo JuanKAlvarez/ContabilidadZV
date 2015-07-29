@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('title')
+Ventas de Internet - Zona Virtual
+@endsection
+
 @section('content')
 
 <input type="hidden" value="#internet-toolbar" id="pag">

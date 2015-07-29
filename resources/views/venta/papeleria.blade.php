@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('title')
+Ventas de Papeleria - Zona Virtual
+@endsection
+
 @section('content')
 <input type="hidden" value="#papeleria-toolbar" id="pag">
 			<div class="panel panel-default">

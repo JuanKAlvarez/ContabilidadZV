@@ -1,14 +1,13 @@
 @extends('app')
 
 @section('title')
-Ventas de Impresora - Zona Virtual
+Lista de Papeleria - Zona Virtual
 @endsection
 
 @section('content')
 
-<input type="hidden" value="#impresora-toolbar" id="pag">
 	<div class="panel panel-default">
-		<div class="panel-heading">Impresora</div>
+		<div class="panel-heading">Lista de Papeleria</div>
 
 		<div class="panel-body">
 		@include('layout.errors')
@@ -17,12 +16,12 @@ Ventas de Impresora - Zona Virtual
 				<div class="col-sm-6 col-sm-offset-2">
 					<!-- Formulario  de creacionde registros -->
 					{!! Form::open([
-						'url' 		=> 	'venta/impresora',
+						'url' 		=> 	'lista/papeleria',
 						'method' 	=> 	'POST',
 						'class'		=>	'form-horizontal'
 					]) !!}
 						<!-- se Incluye el formulario de internet ventas -->
-						@include('forms.impresora.ventas.index')
+						@include('forms.papeleria.lista.index')
 						<!-- Botones de envio y Limpiado -->
 						<div class="for-grup">
 						  	<div class="col-sm-9 col-sm-offset-3">
@@ -44,17 +43,23 @@ Ventas de Impresora - Zona Virtual
 						<table class="table">
 							<tr>
 								<th class="text-center">#</th>
-								<th class="text-center">Fecha</th>
+								<th class="text-center">Articulo</th>
+								<th class="text-center">Marca</th>
+								<th class="text-center">Descripción</th>
 								<th class="text-center">Valor</th>
-								<th class="text-center">Nota</th>
+								<th class="text-center">Precio</th>
+								<th class="text-center">Ganancia</th>
 								<th class="text-center"></th>
 							</tr>
 							@foreach($registros as $registro)
 							<tr>
 								<td class="text-center"> {{$registro->id}} </td>
-								<td class="text-center"> {{ $d = App\Libs\DateToEsp::DiaMesAno($registro->fecha) }} </td>
+								<td class="text-center"> {{ $registro->articulo }} </td>
+								<td class="text-center"> {{ $registro->marca }} </td>
+								<td class="text-center"> {{ $registro->descripcion }} </td>
 								<td class="text-right"> $ {{ number_format( $registro->valor,0) }} </td>
-								<td class="text-center"> {{$registro->nota}} </td>
+								<td class="text-right"> $ {{ number_format( $registro->precio,0) }} </td>
+								<td class="text-right"> $ {{ number_format( $registro->ganancia,0) }} </td>
 								<td class="text-center">
 									<i
 										class="fa fa-pencil btn btn-primary btn-xs "
@@ -83,8 +88,8 @@ Ventas de Impresora - Zona Virtual
 					</div>
 
 
-					@include('modals.impresora.ventas.edit')
-					@include('modals.impresora.ventas.delete')
+					@include('modals.papeleria.lista.edit')
+					@include('modals.papeleria.lista.delete')
 
 
 
@@ -96,4 +101,8 @@ Ventas de Impresora - Zona Virtual
 
 
 
+@endsection
+
+@section('scripts')
+<script src="{{ asset('/js/papeleria.js') }}" charset="utf-8"></script>
 @endsection

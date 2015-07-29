@@ -27,9 +27,15 @@ Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'
     Route::resource('impresora', 	'ImpresoraController');
     Route::resource('papeleria', 	'PapeleriaController');
     Route::resource('servicios', 	'ServiciosController');
-    Route::resource('gana',		 	'GanaController');
+    Route::resource('gana',		 		'GanaController');
     Route::resource('minutos-ip',	'MinutosIPController');
     Route::resource('win-red',		'WinRedController');
 
 });
 
+Route::group(['prefix'=>'lista','namespace' => '\Lista', 'middleware'=> [ 'auth'] ], function()
+{
+    Route::resource('papeleria', 	'PapeleriaController');
+    Route::resource('servicios', 	'ServiciosController');
+
+});

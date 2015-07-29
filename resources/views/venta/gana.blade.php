@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('title')
+Ventas de GANA - Zona Virtual
+@endsection
+
 @section('content')
 <input type="hidden" value="#gana-toolbar" id="pag">
 
