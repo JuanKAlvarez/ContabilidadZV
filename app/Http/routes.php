@@ -14,6 +14,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('admin', 'HomeController@admin');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -27,7 +28,7 @@ Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'
     Route::resource('impresora', 	'ImpresoraController');
     Route::resource('papeleria', 	'PapeleriaController');
     Route::resource('servicios', 	'ServiciosController');
-    Route::resource('gana',		 		'GanaController');
+    Route::resource('gana',		 	'GanaController');
     Route::resource('minutos-ip',	'MinutosIPController');
     Route::resource('win-red',		'WinRedController');
 

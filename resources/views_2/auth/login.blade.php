@@ -4,10 +4,6 @@
 Login
 @endsection
 
-@section('styles')
-<link href=" {{ asset('/css/login.css') }} " rel="stylesheet">
-@endsection
-
 @section('content')
 <div class="container-fluid">
 	<div class="row">
@@ -67,6 +63,3 @@ Login
 	</div>
 </div>
 @endsection
-
-
-

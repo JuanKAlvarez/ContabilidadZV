@@ -8,19 +8,20 @@
 	<link rel="shortcut icon" href="{{ asset('/img/favicon.ico') }} " />
 
 	<!-- Styles -->
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	<!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+ -->
 	<link href=" {{ asset('/css/bootstrap.min.css') }} " rel="stylesheet">
 	<link href=" {{ asset('/css/font-awesome.min.css') }} " rel="stylesheet">
-	<link href=" {{ asset('/css/style.css') }} " rel="stylesheet">
-	<link href=" {{ asset('/css/material-fullpalette.css') }} " rel="stylesheet">
-	<link href=" {{ asset('/css/ripples.css') }} " rel="stylesheet">
+	<!-- <link href=" {{ asset('/css/style.css') }} " rel="stylesheet"> -->
+	<!-- <link href=" {{ asset('/css/material-fullpalette.css') }} " rel="stylesheet"> -->
+	<!-- <link href=" {{ asset('/css/ripples.css') }} " rel="stylesheet"> -->
 	<link href=" {{ asset('/css/roboto.css') }} " rel="stylesheet">
-	<link href=" {{ asset('/css/jquery-ui.css') }} " rel="stylesheet">
+	<!-- <link href=" {{ asset('/css/jquery-ui.css') }} " rel="stylesheet">
 	<link href=" {{ asset('/css/jquery-ui.structure.min.css') }} " rel="stylesheet">
 	<link href=" {{ asset('/css/jquery-ui.theme.min.css') }} " rel="stylesheet">
 	<link href=" {{ asset('/css/jquery-ui.theme.min.css') }} " rel="stylesheet">
-	<link href=" {{ asset('/css/redmond.datepick.css') }} " rel="stylesheet">
+	<link href=" {{ asset('/css/redmond.datepick.css') }} " rel="stylesheet"> -->
+	<link href=" {{ asset('/css/sb-admin.css') }} " rel="stylesheet">
 <!-- 	<link href=" {{ asset('/css/Aristo.css') }} " rel="stylesheet">
  -->
 
