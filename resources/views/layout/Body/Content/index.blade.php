@@ -6,9 +6,9 @@
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">
+                    <h2 class="text-right">
                         @yield('title')
-                    </h1>
+                    </h2>
                     @yield('content')
                 </div>
             </div>

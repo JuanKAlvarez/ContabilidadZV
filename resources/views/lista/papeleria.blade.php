@@ -7,7 +7,11 @@ Lista de Papeleria - Zona Virtual
 @section('content')
 
 	<div class="panel panel-default">
-		<div class="panel-heading">Lista de Papeleria</div>
+		<div class="panel-heading">
+		Lista de Papeleria
+			<a class="btn btn-info pull-right" href="{{ url('/venta/papeleria') }}">Ventas</a>
+
+		</div>
 
 		<div class="panel-body">
 		@include('layout.errors')

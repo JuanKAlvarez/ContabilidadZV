@@ -6,7 +6,7 @@ Ventas de Impresora - Zona Virtual
 
 @section('content')
 
-<input type="hidden" value="#impresora-toolbar" id="pag">
+
 	<div class="panel panel-default">
 		<div class="panel-heading">Impresora</div>
 

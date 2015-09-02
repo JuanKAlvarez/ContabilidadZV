@@ -17,9 +17,9 @@ class InternetController extends Controller {
 	public function index()
 	{
 		$registros = InternetVenta::orderBy('fecha','DESC')
-																			->orderBy('id','DESC')
-																			->paginate(10);
-		return view('venta.internet', compact('registros', 'date'));
+										->orderBy('id','DESC')
+										->paginate(10);
+		return view('venta.internet', compact('registros'));
 	}
 
 	public function store(InternetVentaRequest $recuest)

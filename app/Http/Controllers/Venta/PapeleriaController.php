@@ -2,82 +2,56 @@
 
 namespace App\Http\Controllers\Venta;
 
+use App\PapeleriaVenta;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class PapeleriaController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+
 	public function index()
 	{
-		return view('venta.papeleria');
+
+		$registros = PapeleriaVenta::orderBy('fecha','DESC')
+										->orderBy('id','DESC')
+										->paginate(5);
+
+		return view('venta.papeleria', compact('registros'));
+
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		//
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		//
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function show($id)
 	{
 		//
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function edit($id)
 	{
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function update($id)
 	{
 		//
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function destroy($id)
 	{
 		//
