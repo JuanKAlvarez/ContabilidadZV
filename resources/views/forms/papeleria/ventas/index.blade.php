@@ -8,10 +8,24 @@
 	</div>
 
 <!-- Articulo -->
-	<div class="for-grup">
 	  	{!! Form::label('articulo', 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		{!! Form::text('articulo',  '' ,[	'class' => 'form-control', 'required', 'autofocus']) !!}
+			<div class="for-grup">
+	  		<!-- imput con Boton  -->
+			 <div class="input-group">
+		      {!! Form::text('articulo',  '' ,[	'class' => 'form-control', 'required', 'autofocus']) !!}
+		      <div class="input-group-btn">
+		        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+		        <ul class="dropdown-menu dropdown-menu-right">
+		          <li><a href="#">Action</a></li>
+		          <li><a href="#">Another action</a></li>
+		          <li><a href="#">Something else here</a></li>
+		          <li role="separator" class="divider"></li>
+		          <li><a href="#">Separated link</a></li>
+		        </ul>
+		      </div><!-- /btn-group -->
+		    </div><!-- /input-group -->	
+		    <!-- /imput con Boton  -->
 	  	</div>
 	</div>
 

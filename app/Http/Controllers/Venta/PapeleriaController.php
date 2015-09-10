@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Venta;
 
 use App\PapeleriaVenta;
+use App\Papeleria;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -15,7 +16,9 @@ class PapeleriaController extends Controller {
 
 	public function index()
 	{
-
+		$articulos = Papeleria::orderBy('fecha','DESC')
+										->orderBy('id','DESC')
+										->paginate(5);
 		$registros = PapeleriaVenta::orderBy('fecha','DESC')
 										->orderBy('id','DESC')
 										->paginate(5);
