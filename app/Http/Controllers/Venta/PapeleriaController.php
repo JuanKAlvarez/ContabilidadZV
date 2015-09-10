@@ -16,14 +16,13 @@ class PapeleriaController extends Controller {
 
 	public function index()
 	{
-		$articulos = Papeleria::orderBy('fecha','DESC')
-										->orderBy('id','DESC')
-										->paginate(5);
+		$articulos = Papeleria::orderBy('articulo','ASC');
+
 		$registros = PapeleriaVenta::orderBy('fecha','DESC')
 										->orderBy('id','DESC')
 										->paginate(5);
 
-		return view('venta.papeleria', compact('registros'));
+		return view('venta.papeleria', compact('registros','articulos'));
 
 	}
 
