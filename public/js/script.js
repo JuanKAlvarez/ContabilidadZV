@@ -7,14 +7,12 @@ $( document ).ready(function() {
 // Configurar el datepick
   configdDatepick();
 
-
 });
 
 
-
-
-
 //Funciones
+
+
 function activeMenuV(){
 
   var pathArray = window.location.pathname.split( '/' );

@@ -101,3 +101,7 @@ Ventas de Papeleria - Zona Virtual
 
 
 @endsection
+
+@section('scripts')
+	<script src="{{ asset('/js/papeleriaVenta.js') }}"></script>
+@endsection

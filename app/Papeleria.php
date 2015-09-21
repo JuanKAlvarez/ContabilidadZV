@@ -11,6 +11,6 @@ protected $table = 'papeleria';
 
 
 	protected $fillable = ['articulo', 'marca', 'descripcion','precio', 'valor','ganancia'];
-
+	
 
 }
