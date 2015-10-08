@@ -16,6 +16,7 @@ class PapeleriaController extends Controller {
 
 	public function index()
 	{
+
 		$registros = Papeleria::orderBy('articulo','asc')
 									->orderBy('marca','asc')
 									->paginate(5);
@@ -49,4 +50,5 @@ class PapeleriaController extends Controller {
 		return redirect()->back();
 	}
 
+	
 }

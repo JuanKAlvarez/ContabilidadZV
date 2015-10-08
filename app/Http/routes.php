@@ -15,6 +15,9 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 Route::get('admin', 'HomeController@admin');
+Route::get('papeleriaComplete', 'AutocompleteController@papeleria');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -24,13 +27,13 @@ Route::controllers([
 
 Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'] ], function()
 {
-    Route::resource('internet',	 	'InternetController');
-    Route::resource('impresora', 	'ImpresoraController');
-    Route::resource('papeleria', 	'PapeleriaController');
-    Route::resource('servicios', 	'ServiciosController');
-    Route::resource('gana',		 	'GanaController');
-    Route::resource('minutos-ip',	'MinutosIPController');
-    Route::resource('win-red',		'WinRedController');
+     Route::resource('internet',	 	'InternetController');
+     Route::resource('impresora', 	'ImpresoraController');
+     Route::resource('papeleria', 	'PapeleriaController');
+     Route::resource('servicios', 	'ServiciosController');
+     Route::resource('gana',		 	'GanaController');
+     Route::resource('minutos-ip',	'MinutosIPController');
+     Route::resource('win-red',		'WinRedController');
 
 });
 

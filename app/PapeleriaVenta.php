@@ -10,7 +10,15 @@ class PapeleriaVenta extends Model {
 protected $table = 'papeleria-ventas';
 
 
-	protected $fillable = ['fecha', 'articulo', 'catidad','total', 'ganancia', 'papeleria_id','user_id'];
+	protected $fillable = [
+							'fecha', 
+							'articulo', 
+							'cantidad',
+							'total', 
+							'ganancia', 
+							'papeleria_id',
+							'user_id'
+						];
 
 
 	public function articuloPapeleria()

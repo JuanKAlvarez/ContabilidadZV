@@ -44,7 +44,7 @@ Lista de Papeleria - Zona Virtual
 
 			<hr>
 			<div class="  table-responsive">
-						<table class="table">
+						<table id ="tabla" class="table">
 							<tr>
 								<th class="text-center">#</th>
 								<th class="text-center">Articulo</th>
@@ -66,7 +66,8 @@ Lista de Papeleria - Zona Virtual
 								<td class="text-right"> $ {{ number_format( $registro->ganancia,0) }} </td>
 								<td class="text-center">
 									<i
-										class="fa fa-pencil btn btn-primary btn-xs "
+										class="fa fa-pencil btn btn-primary btn-xs btnEdit}} "
+										btnEdit="{{$registro->id}}"
 										style=" margin: 0"
 										title="Editar"
 										role="button"

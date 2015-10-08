@@ -2,6 +2,9 @@
 $( document ).ready(function() {
   var precio = $( "#precio" );
   var valor = $( "#valor" );
+ // modales
+  var precioMod = $( ".precio-mod" );
+  var valorMod = $( ".valor-mod" );
 
 
   $( "#precio" ).keyup(function() {
@@ -10,7 +13,17 @@ $( document ).ready(function() {
     calcularValor(vlrPrecio);
 
 
+
+
   });
+
+
+  $( "#tabla" ).on( 'click', 'i', function() {
+    var id = $(this).attr('btnEdit');
+    alert(id);
+  });
+
+
 });
 
 
@@ -52,3 +65,4 @@ function calcularGanancia(){
   }
 
 }
+

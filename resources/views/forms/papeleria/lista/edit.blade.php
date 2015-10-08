@@ -25,23 +25,23 @@
 
 	<!-- Precio -->
 		<div class="for-grup">
-		  	{!! Form::label('precio', 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	{!! Form::label('precio-mod', 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
-		  		{!! Form::text('precio',  $registro->precio ,['autocomplete' =>'off',	'class' => 'form-control']) !!}
+		  		{!! Form::text('precio-mod',  $registro->precio ,['autocomplete' =>'off',	'class' => 'form-control precio-mod']) !!}
 		  	</div>
 		</div>
 
 		<!-- Valor -->
 			<div class="for-grup">
-			  	{!! Form::label('valor', 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
+			  	{!! Form::label('valor-mod', 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
 			  	<div class="col-sm-8">
-			  		{!! Form::text('valor',  $registro->valor ,['autocomplete' =>'off',	'class' => 'form-control']) !!}
+			  		{!! Form::text('valor-mod',  $registro->valor ,['autocomplete' =>'off',	'class' => 'form-control valor-mod']) !!}
 			  	</div>
 			</div>
 
 <!-- Ganancia -->
 	<div class="for-grup">
 	  	<div class="col-sm-8">
-	  		{!! Form::hidden('ganancia',  Auth::user()->ganancia ) !!}
+	  		{!! Form::hidden('ganancia', $registro->ganancia,['id'=>'ganancia-mod', 'class' => 'ganancia-mod']) !!}
 	  	</div>
 	</div>
