@@ -13,7 +13,7 @@ Ventas de Papeleria - Zona Virtual
 		</div>
 
 		<div class="panel-body">
-		@include('layout.errors')
+		
 
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-2">
@@ -99,7 +99,7 @@ Ventas de Papeleria - Zona Virtual
 	</div>
 
 
-
+@include('layout.errors')
 @endsection
 
 @section('scripts')

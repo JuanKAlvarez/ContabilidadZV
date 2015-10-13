@@ -11,7 +11,7 @@ Ventas de Impresora - Zona Virtual
 		<div class="panel-heading">Impresora</div>
 
 		<div class="panel-body">
-		@include('layout.errors')
+		
 
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-2">
@@ -94,6 +94,6 @@ Ventas de Impresora - Zona Virtual
 	</div>
 
 
-
+@include('layout.errors')
 
 @endsection

@@ -2,15 +2,22 @@
 $( document ).ready(function() {
     
 //  Menu Vertical, Colocar la clase Active a los items de menu  
-  activeMenuV();   
+  activeMenuV();
  
 // Configurar el datepick
   configdDatepick();
+
+    AutoClosingAlert(".alert", 5000);
 
 });
 
 
 //Funciones
+
+function AutoClosingAlert(selector, delay) {
+   var alert = $(selector).alert();
+   window.setTimeout(function() {alert.alert('close')}, delay);
+}
 
 
 function activeMenuV(){
