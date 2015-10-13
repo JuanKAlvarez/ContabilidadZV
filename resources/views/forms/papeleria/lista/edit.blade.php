@@ -25,23 +25,46 @@
 
 	<!-- Precio -->
 		<div class="for-grup">
-		  	{!! Form::label('precio-mod', 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	{!! Form::label('precio', 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
-		  		{!! Form::text('precio-mod',  $registro->precio ,['autocomplete' =>'off',	'class' => 'form-control precio-mod']) !!}
+		  		<input 
+		  				onkeyup="modal({{$registro->id}})" 
+		  				onchange="modal({{$registro->id}})" 
+		  				autocomplete="off" 
+		  				class="form-control" 
+		  				name="precio" 
+		  				type="text" 
+		  				value="{{$registro->precio}}" 
+		  				id="precio{{$registro->id}}"
+		  		>
 		  	</div>
 		</div>
 
-		<!-- Valor -->
-			<div class="for-grup">
-			  	{!! Form::label('valor-mod', 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
-			  	<div class="col-sm-8">
-			  		{!! Form::text('valor-mod',  $registro->valor ,['autocomplete' =>'off',	'class' => 'form-control valor-mod']) !!}
-			  	</div>
-			</div>
+	<!-- Valor -->
+		<div class="for-grup">
+		  	{!! Form::label('valor', 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	<div class="col-sm-8">
+		  			<input 
+		  				onkeyup="modal({{$registro->id}})"
+		  				onchange="modal({{$registro->id}})"
+		  				autocomplete="off" 
+		  				class="form-control" 
+		  				name="valor" 
+		  				type="text" 
+		  				value="{{$registro->valor}}" 
+		  				id="valor{{$registro->id}}"
+		  			>
+		  	</div>
+		</div>
 
 <!-- Ganancia -->
 	<div class="for-grup">
 	  	<div class="col-sm-8">
-	  		{!! Form::hidden('ganancia', $registro->ganancia,['id'=>'ganancia-mod', 'class' => 'ganancia-mod']) !!}
+	  		
+	  		<input 
+	  				id="ganancia{{$registro->id}}"
+	  				name="ganancia" 
+	  				type="hidden" 
+	  				value="{{$registro->ganancia}}">
 	  	</div>
 	</div>
