@@ -6,21 +6,20 @@ $( document ).ready(function() {
  
 // Configurar el datepick
   configdDatepick();
-
-    AutoClosingAlert(".alert", 5000);
+  AutoClosingAlert(".alert", 5000);
 
 });
 
 
 //Funciones
 
-function AutoClosingAlert(selector, delay) {
+function AutoClosingAlert(selector, delay) { // Retira las alertas despues de 5 Segundos
    var alert = $(selector).alert();
    window.setTimeout(function() {alert.alert('close')}, delay);
 }
 
 
-function activeMenuV(){
+function activeMenuV(){ //Localiza el menuVertical Activo 
 
   var pathArray = window.location.pathname.split( '/' );
     pathArray = '.'+ pathArray[4];
