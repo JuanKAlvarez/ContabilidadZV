@@ -41,7 +41,12 @@
 	<div class="for-grup">
 	  	{!! Form::label('total', 'Total:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		{!! Form::text('total',  '0' ,['class' => 'form-control']) !!}
+	  		{!! Form::text('total',  '0' ,
+	  			[
+	  				'class' => 'form-control',
+	  				'onfocus' => 'this.blur()' 
+	  			]
+	  		)!!}
 	  	</div>
 	</div>
 

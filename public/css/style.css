@@ -1,4 +1,14 @@
 body{
-	font-size: 16px;
+	font-size: 19px;
 	background-color: #fff;
+}
+
+
+.dropdown-menu>li>a, 
+.form-control{
+font-size: 19px; 
+}
+
+.ui-autocomplete { 
+	z-index:2147483647; 
 }

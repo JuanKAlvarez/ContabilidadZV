@@ -88,8 +88,8 @@ Ventas de Papeleria - Zona Virtual
 					</div>
 
 					<!-- por corregir -->
-					@include('modals.internet.ventas.edit')
-					@include('modals.internet.ventas.delete')
+					@include('modals.papeleria.ventas.edit')
+					@include('modals.papeleria.ventas.delete')
 			
 
 

@@ -1,31 +1,31 @@
 <!-- Articulo -->
 	<div class="for-grup">
-	  	{!! Form::label('articulo', 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('articulo'.$registro->id, 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
 	  		{!! Form::text('articulo',$registro->articulo,
-	  		 [	'class' => 'form-control']) !!}
+	  		 [	'id' => 'articulo'.$registro->id	,'class' => 'form-control']) !!}
 	  	</div>
 	</div>
 
 <!-- Marca -->
 	<div class="for-grup">
-	  	{!! Form::label('marca', 'Marca:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('marca'.$registro->id, 'Marca:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		{!! Form::text('marca',  $registro->marca ,[	'class' => 'form-control']) !!}
+	  		{!! Form::text('marca',  $registro->marca ,[ 'id' => 'marca'.$registro->id	,	'class' => 'form-control']) !!}
 	  	</div>
 	</div>
 
 <!-- Descripcion -->
 	<div class="for-grup">
-	  	{!! Form::label('descripcion', 'Descripcion:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('descripcion'.$registro->id, 'Descripcion:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		{!! Form::text('descripcion',  $registro->descripcion ,[	'class' => 'form-control']) !!}
+	  		{!! Form::text('descripcion',  $registro->descripcion ,['id' => 'descripcion'.$registro->id	,'class' => 'form-control']) !!}
 	  	</div>
 	</div>
 
 	<!-- Precio -->
 		<div class="for-grup">
-		  	{!! Form::label('precio', 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	{!! Form::label('precio'.$registro->id, 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
 		  		<input 
 		  				onkeyup="modal({{$registro->id}})" 
@@ -42,7 +42,7 @@
 
 	<!-- Valor -->
 		<div class="for-grup">
-		  	{!! Form::label('valor', 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	{!! Form::label('valor'.$registro->id, 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
 		  			<input 
 		  				onkeyup="modal({{$registro->id}})"
