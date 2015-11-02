@@ -6,19 +6,27 @@
 	  	</div>
 	</div>
 	
-<!-- Total del Dia -->
+<!-- Articulo -->
 	<div class="for-grup">
-	  	{!! Form::label('valor', 'Total del Dia:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('articulo', 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		<p>{!!$registro->valor!!}</p>
+	  		<p>{!!$registro->articulo!!}</p>
 	  	</div>
 	</div>	
 
-<!-- Nota -->
+<!-- Cantidad -->
 	<div class="for-grup">
-	  	{!! Form::label('nota', 'Nota:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('cantidad', 'Cantidad:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
-	  		<p> {!!  $registro->nota  !!} </p>
+	  		<p> {!!  $registro->cantidad  !!} </p>
+	  	</div>
+	</div>
+
+<!-- Cantidad -->
+	<div class="for-grup">
+	  	{!! Form::label('total', 'Total:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	<div class="col-sm-8">
+	  		<p> {!!  $registro->total  !!} </p>
 	  	</div>
 	</div>
 
