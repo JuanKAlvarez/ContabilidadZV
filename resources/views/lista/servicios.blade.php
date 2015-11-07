@@ -1,28 +1,30 @@
 @extends('app')
 
 @section('title')
-Ventas de Impresora - Zona Virtual
+Lista de Servicios - Zona Virtual
 @endsection
 
 @section('content')
 
-
 	<div class="panel panel-default">
-		<div class="panel-heading">Impresora</div>
+		<div class="panel-heading">
+		Lista de Servicios
+			<a class="btn btn-info pull-right" href="{{ url('/venta/servicios') }}">Ventas</a>
+
+		</div>
 
 		<div class="panel-body">
 		
-
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-2">
 					<!-- Formulario  de creacionde registros -->
 					{!! Form::open([
-						'url' 		=> 	'venta/impresora',
+						'url' 		=> 	'lista/servicios',
 						'method' 	=> 	'POST',
 						'class'		=>	'form-horizontal'
 					]) !!}
 						<!-- se Incluye el formulario de internet ventas -->
-						@include('forms.impresora.ventas.index')
+						@include('forms.servicios.lista.index')
 						<!-- Botones de envio y Limpiado -->
 						<div class="for-grup">
 						  	<div class="col-sm-9 col-sm-offset-3">
@@ -41,23 +43,22 @@ Ventas de Impresora - Zona Virtual
 
 			<hr>
 			<div class="  table-responsive">
-						<table class="table">
+						<table id ="tabla" class="table">
 							<tr>
 								<th class="text-center">#</th>
-								<th class="text-center">Fecha</th>
+								<th class="text-center">Servicio</th>
 								<th class="text-center">Valor</th>
-								<th class="text-center">Nota</th>
 								<td class="text-center"></td>
 							</tr>
 							@foreach($registros as $registro)
 							<tr>
 								<td class="text-center"> {{$registro->id}} </td>
-								<td class="text-center"> {{ $d = App\Libs\DateToEsp::DiaMesAno($registro->fecha) }} </td>
+								<td class="text-center"> {{ $registro->servicio }} </td>
 								<td class="text-right"> $ {{ number_format( $registro->valor,0) }} </td>
-								<td class="text-center"> {{$registro->nota}} </td>
 								<td class="text-center">
 									<i
-										class="fa fa-pencil btn btn-primary btn-xs "
+										class="fa fa-pencil btn btn-primary btn-xs btnEdit}} "
+										btnEdit="{{$registro->id}}"
 										style=" margin: 0"
 										title="Editar"
 										role="button"
@@ -83,8 +84,8 @@ Ventas de Impresora - Zona Virtual
 					</div>
 
 
-					@include('modals.impresora.ventas.edit')
-					@include('modals.impresora.ventas.delete')
+					@include('modals.servicios.lista.edit')
+					@include('modals.servicios.lista.delete')
 
 
 
@@ -94,6 +95,11 @@ Ventas de Impresora - Zona Virtual
 	</div>
 
 
+
 @include('layout.errors')
 
+@endsection
+
+@section('scripts')
+<script src="{{ asset('/js/papeleria.js') }}" charset="utf-8"></script>
 @endsection

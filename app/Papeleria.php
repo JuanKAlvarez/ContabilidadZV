@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Papeleria extends Model {
 
@@ -10,7 +11,17 @@ class Papeleria extends Model {
 protected $table = 'papeleria';
 
 
-	protected $fillable = ['articulo', 'marca', 'descripcion','precio', 'valor','ganancia'];
+	protected $fillable = 
+				[
+					'articulo',
+					'marca', 
+					'descripcion',
+					'precio', 
+					'valor',
+					'ganancia'
+				];
+				
+	protected $dates = ['deleted_at'];
 	
 
 }

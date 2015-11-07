@@ -16,13 +16,12 @@ class CreateServiciosTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('servicio');
-			$table->double('precio',15,2);
-			$table->string('descripcion')->nullable();
 			$table->double('valor',15,2);
 
 
 
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

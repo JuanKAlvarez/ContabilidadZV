@@ -23,10 +23,9 @@ class PapeleriaRequest extends Request {
 	{
 		return [
 			'articulo'			=>	'required',
-			'marca'					=>	'required',
 			'descripcion'		=>	'required',
-			'valor'					=>	'required | numeric',
-			'precio'				=>	'required | numeric',
+			'valor'				=>	'required | numeric',
+			'precio'			=>	'required | numeric',
 			'ganancia'			=>	'numeric',
 		];
 	}

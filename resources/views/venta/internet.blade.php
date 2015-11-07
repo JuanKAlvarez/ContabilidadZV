@@ -47,7 +47,7 @@ Ventas de Internet - Zona Virtual
 								<th class="text-center">Fecha</th>
 								<th class="text-center">Valor</th>
 								<th class="text-center">Nota</th>
-								<th class="text-center"></th>
+								<td class="text-center"></td>
 							</tr>
 							@foreach($registros as $registro)
 							<tr>

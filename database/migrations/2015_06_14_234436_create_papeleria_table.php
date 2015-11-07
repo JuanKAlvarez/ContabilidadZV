@@ -16,13 +16,14 @@ class CreatePapeleriaTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('articulo');
-			$table->string('marca');
+			$table->string('marca')->nullable();
 			$table->string('descripcion')->nullable();
 			$table->double('precio',15,2);
 			$table->double('valor',15,2);
 			$table->double('ganancia',15,2);
 
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

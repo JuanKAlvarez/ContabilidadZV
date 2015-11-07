@@ -11,7 +11,7 @@
 		<div class="for-grup">
 		  	{!! Form::label('marca', 'Marca:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
-		  		{!! Form::text('marca',  '' ,[	'class' => 'form-control', 'required', 'autofocus']) !!}
+		  		{!! Form::text('marca',  '' ,[	'class' => 'form-control', 'autofocus']) !!}
 		  	</div>
 		</div>
 

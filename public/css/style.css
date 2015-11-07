@@ -3,6 +3,12 @@ body{
 	background-color: #fff;
 }
 
+th{
+	background-color: #50B1FC;
+	color: #fff;
+	border: 2px solid #fff;
+}
+
 
 .dropdown-menu>li>a, 
 .form-control{

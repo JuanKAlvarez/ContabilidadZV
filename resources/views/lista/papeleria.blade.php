@@ -52,7 +52,7 @@ Lista de Papeleria - Zona Virtual
 								<th class="text-center">Valor</th>
 								<th class="text-center">Precio</th>
 								<th class="text-center">Ganancia</th>
-								<th class="text-center"></th>
+								<td class="text-center"></td>
 							</tr>
 							@foreach($registros as $registro)
 							<tr>

@@ -40,6 +40,6 @@ Route::group(['prefix'=>'venta','namespace' => '\Venta', 'middleware'=> [ 'auth'
 Route::group(['prefix'=>'lista','namespace' => '\Lista', 'middleware'=> [ 'auth'] ], function()
 {
     Route::resource('papeleria', 	'PapeleriaController');
-    Route::resource('servicios', 	'ServiciosController');
+    Route::resource('servicios', 	'ServicioController');
 
 });
