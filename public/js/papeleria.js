@@ -1,14 +1,20 @@
 
 $( document ).ready(function() {
- 
+//Variables Globales
   var precio = $( "#precio" );
   var valor = $( "#valor" );
 
+//Se calcula el valor y la ganancia si se cambia el campo precio
   $( "#precio" ).keyup(function() {
     $( "#valor" ).val("");
     var vlrPrecio = parseInt(precio.val());
     calcularValor(vlrPrecio);
 
+  });
+
+//Se calcula la ganancia si se cambia el campo valor
+  $( "#valor" ).keyup(function() {
+    calcularGanancia();
   });
 
 });
