@@ -62,16 +62,19 @@ function calcularGanancia(){
 
 function modal(id){
   
-  var precio;
-  var valor;
+//Se calcula el valor para el modal
+  valorModal(id);
 
-  precio = parseInt($('#precio'+id).val());
-  valor = $('#valor'+id);
+//Se calcula la gaancia
+  gananciaModal(id);
 
-  valor.val(0);
-  
-//Se calcula el valor
- 
+
+}
+
+function valorModal (id) {
+  var precio = parseInt($('#precio'+id).val());
+  var valor = $('#valor'+id);
+
   if (precio) {
     i = precio + (precio * 0.45);
     i = (i/50);
@@ -81,9 +84,9 @@ function modal(id){
   } else {
     valor.val(0);
   }
+}
 
-//Se calcula la gaancia
-
+function gananciaModal (id) {
   var precio = parseInt($('#precio'+id).val());
   var valor = parseInt($('#valor'+id).val());
   var ganancia = $('#ganancia'+id);
@@ -95,9 +98,6 @@ function modal(id){
   } else {
     ganancia.val(0);
   }
-
-
-
 
 }
 
