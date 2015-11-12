@@ -25,7 +25,11 @@
 
 	<!-- Precio -->
 		<div class="for-grup">
-		  	{!! Form::label('precio'.$registro->id, 'Precio:',[	'class' => 'col-sm-4 control-label']) !!}
+		  	{!! Form::label('precio'.$registro->id, 'Precio:',
+		  		[
+		  			'class' => 'col-sm-4 control-label'
+		  		])
+		  	!!}
 		  	<div class="col-sm-8">
 		  		<input 
 		  				onkeyup="modal({{$registro->id}})" 
@@ -45,8 +49,8 @@
 		  	{!! Form::label('valor'.$registro->id, 'Valor:',[	'class' => 'col-sm-4 control-label']) !!}
 		  	<div class="col-sm-8">
 		  			<input 
-		  				onkeyup="modal({{$registro->id}})"
-		  				onchange="modal({{$registro->id}})"
+		  				onkeyup="gananciaModal({{$registro->id}})"
+		  				onchange="gananciaModal({{$registro->id}})"
 		  				autocomplete="off" 
 		  				class="form-control" 
 		  				name="valor" 
