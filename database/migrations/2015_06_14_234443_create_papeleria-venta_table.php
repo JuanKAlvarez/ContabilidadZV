@@ -17,7 +17,7 @@ class CreatePapeleriaVentaTable extends Migration {
 			$table->increments('id');
 			$table->date('fecha');
 			$table->string('articulo');
-			$table->smallInteger('catidad');
+			$table->smallInteger('cantidad');
 			$table->double('total',15,2);
 			$table->double('ganancia',15,2);
 

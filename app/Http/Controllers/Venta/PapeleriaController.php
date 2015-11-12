@@ -35,11 +35,10 @@ class PapeleriaController extends Controller {
 
 	public function store(PapeleriaVentaRequest $recuest)
 	{
-		
+	
 		$data = new PapeleriaVenta();
 		$data->fill($recuest->all());
 		$data->user_id = \Auth::user()->id;
-
 		$data->save();
 		Session::flash('message','El Registro Fue Ingresado Satisfactoriamente');
 		return redirect()->back();
