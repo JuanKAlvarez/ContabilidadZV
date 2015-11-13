@@ -1,5 +1,4 @@
 
-
 <!-- Fecha -->
 	<div class="for-grup">
 	  	{!! Form::label('fecha', 'Fecha:',[	'class' => 'col-sm-4 control-label']) !!}
@@ -9,28 +8,28 @@
 	  	</div>
 	</div>
 
-<!-- Articulo -->
-{!! Form::label('articulo', 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
+<!-- servicio -->
+{!! Form::label('servicio', 'Servicio:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">
 			<div class="for-grup">
 	  		<!-- imput con Boton  -->
 			 <div class="input-group">
-		      {!! Form::text('articulo',  $registro->articulo ,
+		      {!! Form::text('servicio',  $registro->servicio ,
 		      		[
 			      		'onkeyup' 	=>	'idModal('.$registro->id.');',
 			      		'onchange'	=>	'idModal('.$registro->id.');',
 			      		'id'		=>'articulo'.$registro->id ,
 			      		'class' 	=> 'artic form-control articulo', 'required', 'autofocus', 
-			      		'valor'.$registro->id.'' 			=> $registro->total / $registro->cantidad, 
-			      		'gananciaUnit'.$registro->id.'' 	=> $registro->ganancia / $registro->cantidad
+			      		'valor'.$registro->id.'' 			=> '0', 
+			      		
 			      	]) 
 			    !!}
 
 		      <div class="input-group-btn">
 		        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
 		        <ul class="dropdown-menu dropdown-menu-right">
-					@foreach($articulos as $articulo)					
-	     				 <li><a class="arti"  idM='{{$registro->id}}' papeleriaId='{{$articulo->id}}'  gananciaUnit=' {{$articulo->ganancia}} ' valor=' {{$articulo->valor}} ' href="#" >{{$articulo->articulo.' '.$articulo->marca.' '.$articulo->descripcion}}</a></li>
+					@foreach($servicios as $servicio)					
+	     				 <li><a class="arti"  idM='{{$registro->id}}' servicioId='{{$servicio->id}}'   valor=' {{$servicio->valor}} ' href="#" >{{$servicio->servicio}}</a></li>
 					@endforeach
 		        </ul>
 		      </div><!-- /btn-group -->
@@ -73,12 +72,6 @@
 	  	</div>
 	</div>
 
-<!-- Ganancia -->
-	<div class="for-grup">
-	  	<div class="col-sm-8">
-	  		{!! Form::hidden('ganancia',  $registro->ganancia,['id'=>'ganancia'.$registro->id ] ) !!}
-	  	</div>
-	</div>
 
 <!-- ID del Usuario -->
 	<div class="for-grup">
@@ -87,9 +80,9 @@
 	  	</div>
 	</div>
 
-<!-- ID del papeleria -->
+<!-- ID del Servicio -->
 	<div class="for-grup">
 	  	<div class="col-sm-8">
-	  		{!! Form::hidden('papeleria_id',  $registro->papeleria_id, ['id'=>'papeleria_id'.$registro->id ] ) !!}
+	  		{!! Form::hidden('servicio_id',  $registro->servicio_id, ['id'=>'servicio_id'.$registro->id ] ) !!}
 	  	</div>
 	</div>

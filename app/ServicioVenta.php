@@ -10,7 +10,7 @@ class ServicioVenta extends Model {
 protected $table = 'sevicios-ventas';
 
 
-	protected $fillable = ['id', 'fecha', 'servicio','catidad', 'total', 'servicio_id','user_id'];
+	protected $fillable = ['id', 'fecha', 'servicio','cantidad', 'total', 'servicio_id','user_id'];
 
 
 	public function servicio()

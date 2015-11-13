@@ -54,10 +54,11 @@ Ventas de Servicios - Zona Virtual
 								<td class="text-center"></td>
 							</tr>
 							@foreach($registros as $registro)
+
 							<tr>
 								<td class="text-center"> {{$registro->id}} </td>
 								<td class="text-center"> {{ $d = App\Libs\DateToEsp::DiaMesAno($registro->fecha) }} </td>
-								<td class="text-center"> {{$registro->articulo}} </td>
+								<td class="text-center"> {{$registro->servicio}} </td>
 								<td class="text-center"> {{$registro->cantidad}} </td>
 								<td class="text-right"> $ {{ number_format( $registro->total,0) }} </td>
 								<td class="text-center">
@@ -88,7 +89,7 @@ Ventas de Servicios - Zona Virtual
 					</div>
 
 					<!-- por corregir -->
-					@include('modals.servicios.ventas.edit')
+					
 					@include('modals.servicios.ventas.delete')
 			
 
@@ -100,6 +101,11 @@ Ventas de Servicios - Zona Virtual
 
 
 @include('layout.errors')
+
+@endsection
+
+@section('scripts')
+	<script src="{{ asset('/js/serviciosVenta.js') }}"></script>
 @endsection
 
 

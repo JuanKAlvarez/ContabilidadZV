@@ -101,5 +101,5 @@ Lista de Servicios - Zona Virtual
 @endsection
 
 @section('scripts')
-<script src="{{ asset('/js/papeleria.js') }}" charset="utf-8"></script>
+<script src="{{ asset('/js/servicios.js') }}" charset="utf-8"></script>
 @endsection
