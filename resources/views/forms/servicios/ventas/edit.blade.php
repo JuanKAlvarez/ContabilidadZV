@@ -1,15 +1,27 @@
 
 <!-- Fecha -->
 	<div class="for-grup">
-	  	{!! Form::label('fecha', 'Fecha:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('fecha', 'Fecha:',
+	  		[
+	  			'class' => 'col-sm-4 control-label'
+	  		]) 
+	  	!!}
 	  	<div class="col-sm-8">
 	  		{!! Form::text('fecha' ,$registro->fecha,
-	  		 [	'id'=>'fecha'.$registro->id ,'class' => 'form-control datepicker']) !!}
+	  		 	[
+	  		 		'id'=>'fecha'.$registro->id ,
+	  		 		'class' => 'form-control datepicker'
+	  		 	])
+	  		!!}
 	  	</div>
 	</div>
 
 <!-- servicio -->
-{!! Form::label('servicio', 'Servicio:',[	'class' => 'col-sm-4 control-label']) !!}
+	{!! Form::label('servicio', 'Servicio:',
+		[
+			'class' => 'col-sm-4 control-label'
+		]) 
+	!!}
 	  	<div class="col-sm-8">
 			<div class="for-grup">
 	  		<!-- imput con Boton  -->
@@ -18,9 +30,11 @@
 		      		[
 			      		'onkeyup' 	=>	'idModal('.$registro->id.');',
 			      		'onchange'	=>	'idModal('.$registro->id.');',
-			      		'id'		=>'articulo'.$registro->id ,
-			      		'class' 	=> 'artic form-control articulo', 'required', 'autofocus', 
-			      		'valor'.$registro->id.'' 			=> '0', 
+			      		'id'		=>	'servicio'.$registro->id ,
+			      		'class' 	=> 'artic form-control articulo', 
+			      		'required', 
+			      		'autofocus', 
+			      		'valor'.$registro->id.'' => $registro->total, 
 			      		
 			      	]) 
 			    !!}
@@ -29,7 +43,17 @@
 		        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
 		        <ul class="dropdown-menu dropdown-menu-right">
 					@foreach($servicios as $servicio)					
-	     				 <li><a class="arti"  idM='{{$registro->id}}' servicioId='{{$servicio->id}}'   valor=' {{$servicio->valor}} ' href="#" >{{$servicio->servicio}}</a></li>
+	     				 <li>
+	     				 	<a 
+	     				 		class="arti"  
+	     				 		idM='{{$registro->id}}'  
+	     				 		servicioId='{{$servicio->id}}'   
+	     				 		valor=' {{$servicio->valor}} ' 
+	     				 		href="#" 
+	     				 	>
+	     				 	{{$servicio->servicio}}
+	     				 	</a>
+	     				</li>
 					@endforeach
 		        </ul>
 		      </div><!-- /btn-group -->
@@ -41,7 +65,11 @@
 
 <!-- Cantidad -->
 	<div class="for-grup">
-	  	{!! Form::label('cantidad', 'Cantidad:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('cantidad', 'Cantidad:',
+	  		[
+	  			'class' => 'col-sm-4 control-label'
+	  		]) 
+	  	!!}
 	  	<div class="col-sm-8">
 	  		{!! Form::number('cantidad',  $registro->cantidad ,
 	  			[
@@ -58,7 +86,11 @@
 
 <!-- Total -->
 	<div class="for-grup">
-	  	{!! Form::label('total', 'Total:',[	'class' => 'col-sm-4 control-label']) !!}
+	  	{!! Form::label('total', 'Total:',
+	  		[
+	  			'class' => 'col-sm-4 control-label'
+	  		]) 
+	  	!!}
 	  	<div class="col-sm-8">
 	  		{!! Form::text('total',  $registro->total ,
 	  			[
@@ -83,6 +115,10 @@
 <!-- ID del Servicio -->
 	<div class="for-grup">
 	  	<div class="col-sm-8">
-	  		{!! Form::hidden('servicio_id',  $registro->servicio_id, ['id'=>'servicio_id'.$registro->id ] ) !!}
+	  		{!! Form::hidden('servicio_id',  $registro->servicio_id, 
+	  			[
+	  				'id'=>'servicio_id'.$registro->id 
+	  			]) 
+	  		!!}
 	  	</div>
 	</div>

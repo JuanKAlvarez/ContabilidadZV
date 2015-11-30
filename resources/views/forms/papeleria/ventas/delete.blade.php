@@ -6,7 +6,7 @@
 	  	</div>
 	</div>
 	
-<!-- Articulo -->
+<!-- Articulo  -->
 	<div class="for-grup">
 	  	{!! Form::label('articulo', 'Articulo:',[	'class' => 'col-sm-4 control-label']) !!}
 	  	<div class="col-sm-8">

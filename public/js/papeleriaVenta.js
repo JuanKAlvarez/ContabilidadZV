@@ -51,6 +51,7 @@ $(function()
         var nameArticulo = art.text();
         var valorArticulo = art.attr('valor');
         var gananciaUnit = art.attr('gananciaUnit');
+        console.log(gananciaUnit);
         var papeleriaId = art.attr('papeleriaId');
 
         //Asignamiento de valores en el DOM

@@ -1,5 +1,4 @@
 
-
 <!-- Fecha -->
 	<div class="for-grup">
 	  	{!! Form::label('fecha', 'Fecha:',[	'class' => 'col-sm-4 control-label']) !!}
@@ -20,9 +19,11 @@
 			      		'onkeyup' 	=>	'idModal('.$registro->id.');',
 			      		'onchange'	=>	'idModal('.$registro->id.');',
 			      		'id'		=>'articulo'.$registro->id ,
-			      		'class' 	=> 'artic form-control articulo', 'required', 'autofocus', 
-			      		'valor'.$registro->id.'' 			=> $registro->total / $registro->cantidad, 
-			      		'gananciaUnit'.$registro->id.'' 	=> $registro->ganancia / $registro->cantidad
+			      		'class' 	=> 'artic form-control articulo', 
+			      		'required', 
+			      		'autofocus', 
+			      		'valor'.$registro->id.''=> $registro->total / $registro->cantidad, 
+			      		'gananciaUnit'.$registro->id.''=> $registro->ganancia / $registro->cantidad
 			      	]) 
 			    !!}
 
@@ -30,7 +31,15 @@
 		        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
 		        <ul class="dropdown-menu dropdown-menu-right">
 					@foreach($articulos as $articulo)					
-	     				 <li><a class="arti"  idM='{{$registro->id}}' papeleriaId='{{$articulo->id}}'  gananciaUnit=' {{$articulo->ganancia}} ' valor=' {{$articulo->valor}} ' href="#" >{{$articulo->articulo.' '.$articulo->marca.' '.$articulo->descripcion}}</a></li>
+	     				<li>
+	     				 	<a 
+	     				 		class="arti"  
+	     				 		idM='{{$registro->id}}' 
+	     				 		papeleriaId='{{$articulo->id}}'
+	     				 		gananciaUnit=' {{$articulo->ganancia}} '
+	     				 		valor=' {{$articulo->valor}} ' 
+	     				 		href="#" >{{$articulo->articulo.' '.$articulo->marca.' '.$articulo->descripcion}}</a>
+	     				</li>
 					@endforeach
 		        </ul>
 		      </div><!-- /btn-group -->

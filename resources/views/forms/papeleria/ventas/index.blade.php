@@ -19,7 +19,14 @@
 		        <ul class="dropdown-menu dropdown-menu-right">
 					@foreach($articulos as $articulo)
 					
-	     				 <li><a class="art" papeleriaId='{{$articulo->id}}'  gananciaUnit=' {{$articulo->ganancia}} ' valor=' {{$articulo->valor}} ' href="#" >{{$articulo->articulo.' '.$articulo->marca.' '.$articulo->descripcion}}</a></li>
+	     				 <li>
+	     				 	<a 
+	     				 		class="art" 
+	     				 		papeleriaId='{{$articulo->id}}'
+	     				 		gananciaUnit=' {{$articulo->ganancia}} '
+	     				 		valor=' {{$articulo->valor}} ' 
+	     				 		href="#" >{{$articulo->articulo.' '.$articulo->marca.' '.$articulo->descripcion}}</a>
+	     				</li>
 
 					@endforeach
 		        </ul>

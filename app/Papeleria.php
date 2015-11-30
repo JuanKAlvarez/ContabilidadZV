@@ -10,7 +10,8 @@ class Papeleria extends Model {
 
 protected $table = 'papeleria';
 
-
+ use SoftDeletes;
+ 
 	protected $fillable = 
 				[
 					'articulo',

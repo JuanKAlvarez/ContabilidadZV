@@ -10,6 +10,7 @@ class Servicio extends Model {
 
 protected $table = 'servicios';
 
+use SoftDeletes;
 
 	protected $fillable = 
 				[

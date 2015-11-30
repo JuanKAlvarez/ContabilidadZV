@@ -1,7 +1,7 @@
 var idM = 0;
 $(function()
 {
-     //Configuracion del Autocomplete de articulos en modal editar
+     //Configuracion del Autocomplete de servicios en modal editar
      $( ".artic" ).autocomplete({
           source: "../serviciosComplete",
           minLength: 1,
@@ -12,7 +12,7 @@ $(function()
 
 
             servicio.val(ui.item.value);
-            servicio.attr('valor'+idM , ui.item.valor);
+            servicio.attr('tital'+idM , ui.item.valor);
             servicioId.val(ui.item.id);
 
             calcularTG1();
@@ -20,7 +20,7 @@ $(function()
       }
     });
 
-     //Configuracion del Autocomplete de articulos
+     //Configuracion del Autocomplete de servicios
      $( "#servicio" ).autocomplete({
       source: "../serviciosComplete",
       minLength: 1,
@@ -43,7 +43,7 @@ $(function()
     // Se asigna por default 0 como Total Vendido  
     $('#total').val(0);
 
-    //Detecta el Click en los enlaces del las listas de articulos
+    //Detecta el Click en los enlaces del las listas de servicios
     $(".art").bind("click", function() {
         
         //variables a utilizar
@@ -100,27 +100,27 @@ $(function()
      *  ---------------------- Modal Editar Logica ----------------------
      */
 
-     //Detecta el Click en los enlaces del las listas de articulos
+     //Detecta el Click en los enlaces del las listas de servicios
     $(".arti").bind("click", function() {
+        console.log(idM);
         
         //variables a utilizar
-        var art = $(this);
-        var idM = art.attr('idM');
-        var articulo = $('#articulo'+idM);
+        var serv = $(this);
+        var idMs = serv.attr('idM');
+        var servicio = $('#servicio'+idM);
         var total = $('#total'+idM);
         var cantidad = $('#cantidad'+idM).val();
-        var nameArticulo = art.text();
-        var valorArticulo = art.attr('valor');
-        var gananciaUnit = art.attr('gananciaUnit');
-        var papeleriaId = art.attr('papeleriaId');
+        var nameServicio = serv.text();
+        var valorServicio = serv.attr('valor');
+        var servicioId = serv.attr('servicioId');
 
         //Asignamiento de valores en el DOM
-        articulo.val(nameArticulo);
-        articulo.attr('valor'+idM, valorArticulo);
-        articulo.attr('gananciaUnit'+idM , gananciaUnit);
-        $('#papeleria_id'+idM).val(papeleriaId);
-        total.val(valorArticulo*cantidad); // calcular el total
-        ganancia.val(gananciaUnit*cantidad);// calcular ganancia
+        servicio.val(nameServicio);
+        servicio.attr('valor'+idM, valorServicio);
+
+        $('#servicio_id'+idM).val(servicioId);
+        total.val(valorServicio*cantidad); // calcular el total
+
         //Operaciones a realizar
         calcularTG1();
 
@@ -130,13 +130,12 @@ $(function()
       function calcularTG1() {
         /*-------------------CalcularTotal-------------------*/
         //variables a utilizar
-        var articulo = $('#articulo'+idM);
+        var servicio = $('#servicio'+idM);
         var total = $('#total'+idM);
         var cant = $('#cantidad'+idM);
         var cantidad = parseInt(cant.val());
-        var valor = parseInt(articulo.attr('valor'+idM));
-        var gananciaUnit = parseInt(articulo.attr('gananciaUnit'+idM ));
-        var ganancia  = 0;
+        var valor = parseInt(servicio.attr('valor'+idM));
+
 
         //Verificamos si los campos Valor y cantidad existen
         if (isNaN(valor)||isNaN(cantidad)) {
@@ -147,16 +146,12 @@ $(function()
            total.val(cantidad*valor);
         }
 
-        /*-------------------CalcularGanancia-------------------*/
-
-        ganancia  = cantidad * gananciaUnit ;
-        $('#ganancia'+idM).val(ganancia);
-
     }
 
-
-
 });
+
+
+
     /*
      *  ---------------------- Modal Editar Logica ----------------------
      */
@@ -167,16 +162,12 @@ $(function()
     function calcularTG(id) {
         /*-------------------CalcularTotal-------------------*/
         //variables a utilizar
-        var articulo = $('#articulo'+id);
+        var servicio = $('#servicio'+id);
         var total = $('#total'+id);
         var cant = $('#cantidad'+id);
         var cantidad = parseInt(cant.val());
-        var valor = parseInt(articulo.attr('valor'+id));
-        var gananciaUnit = parseInt(articulo.attr('gananciaUnit'+id ));
-        var ganancia  = 0;
-        console.log('cantidad '+cantidad);
-        console.log('valor '+valor);
-        console.log('gananciaUnit '+gananciaUnit);
+        var valor = parseInt(servicio.attr('valor'+id));
+
 
         //Verificamos si los campos Valor y cantidad existen
         if (isNaN(valor)||isNaN(cantidad)) {
@@ -186,11 +177,6 @@ $(function()
             //si estan definidos el total se calcula normalmente
            total.val(cantidad*valor);
         }
-
-        /*-------------------CalcularGanancia-------------------*/
-
-        ganancia  = cantidad * gananciaUnit ;
-        $('#ganancia'+id).val(ganancia);
 
 
     }

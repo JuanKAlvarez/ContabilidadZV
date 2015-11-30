@@ -90,6 +90,7 @@ Ventas de Servicios - Zona Virtual
 
 					<!-- por corregir -->
 					
+					@include('modals.servicios.ventas.edit')
 					@include('modals.servicios.ventas.delete')
 			
 

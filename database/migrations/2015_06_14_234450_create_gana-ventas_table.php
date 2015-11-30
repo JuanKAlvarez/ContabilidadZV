@@ -18,8 +18,8 @@ class CreateGanaVentasTable extends Migration {
 			$table->date('fecha');
 			$table->double('liquidar',15,2);
 			$table->double('ganancia',15,2);
-			$table->double('perdida',15,2);
-			$table->double('total-dia',15,2);
+			$table->double('perdida',15,2)->default(0);
+			$table->double('total_dia',15,2);
 			$table->string('nota')->nullable();
 
 			$table->integer('user_id')->unsigned();
