@@ -15,7 +15,10 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 Route::get('admin', 'HomeController@admin');
+
+//rutas para Autocompletado de JQery
 Route::get('papeleriaComplete', 'AutocompleteController@papeleria');
+Route::get('serviciosComplete', 'AutocompleteController@servicios');
 
 
 

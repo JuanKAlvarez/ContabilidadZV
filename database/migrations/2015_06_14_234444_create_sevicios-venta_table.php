@@ -17,7 +17,7 @@ class CreateSeviciosVentaTable extends Migration {
 			$table->increments('id');
 			$table->date('fecha');
 			$table->string('servicio');
-			$table->smallInteger('catidad');
+			$table->smallInteger('cantidad');
 			$table->double('total',15,2);
 
 			$table->integer('servicio_id')->unsigned();

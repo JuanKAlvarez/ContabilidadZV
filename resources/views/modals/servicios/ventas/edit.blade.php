@@ -10,7 +10,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
      {!! Form::model($registro ,array(
-      			'url' => 'venta/papeleria/'.$registro->id,
+      			'url' => 'venta/servicios/'.$registro->id,
       			'method' => 'PUT',
       			'class' => 'form-horizontal'
       	)) !!}
@@ -19,8 +19,8 @@
 	        <h4 class="modal-title" id="myModalLabel">Editando el Registro N° {{$registro->id}}</h4>
 	      </div>
 	      <div class="modal-body">
-				<!-- se Incluye el formulario de internet ventas -->
-				@include('forms.papeleria.ventas.edit')
+				<!-- se Incluye el formulario de servicio ventas -->
+				@include('forms.servicios.ventas.edit')
 	      </div>
 
 	      <div class="modal-footer">

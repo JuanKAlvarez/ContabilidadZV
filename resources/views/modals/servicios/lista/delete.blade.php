@@ -10,7 +10,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
      {!! Form::model($registro ,array(
-      			'url' => 'lista/servicio/'.$registro->id,
+      			'url' => 'lista/servicios/'.$registro->id,
       			'method' => 'DELETE',
       			'class' => 'form-horizontal'
       	)) !!}

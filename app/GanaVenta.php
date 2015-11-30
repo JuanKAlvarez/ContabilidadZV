@@ -10,7 +10,15 @@ class GanaVenta extends Model {
 protected $table = 'gana-ventas';
 
 
-	protected $fillable = ['fecha', 'liquidar', 'ganancia','perdida', 'total-dia', 'nota','user_id'];
+	protected $fillable = [
+							'fecha', 
+							'liquidar', 
+							'ganancia',
+							'perdida', 
+							'total_dia', 
+							'nota',
+							'user_id'
+						   ];
 
 
     public function user()
